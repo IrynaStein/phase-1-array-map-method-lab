@@ -12,5 +12,28 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map(function (tutorialByLine){
+    return tutorialByLine.split(' ').map(function (word){
+      return word.charAt(0).toUpperCase() + word.slice(1)
+    }).join(' ');
+  });
+  };
+
+// const titleCased = tutorials.map(eachTutorial => {
+//   const splitText = eachTutorial.split(' ');
+//   for (let i = 0; i < splitText.length; i++) {
+//     splitText[i] = splitText[i][0].toUpperCase() + splitText[i].substr(1);
+//   };
+//     splitText.join(' ')
+//     return splitText
+//   });
+//   const finishedSentences = titleCased.map (eachNewTutorial => { return eachNewTutorial.join(' ')})
+
+//   tutorials.splice(0, finishedSentences.length,...finishedSentences)
+
+
+
+
+
+  
+  
